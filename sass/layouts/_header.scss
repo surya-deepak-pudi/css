@@ -1,0 +1,38 @@
+.header {
+  height: 95vh; /*to set the % of veiwport height to be displayed*/
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primay-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
+  /*linear gradient is the transition from one color to another first attr is direction next two colrs*/
+  /*background-image that should be added*/
+  background-size: cover; /*cover makes it dynamically set the size a per the screen size (responsive) */
+  background-position: top; /*always the top remains the same but bottom changes we set center bottom*/
+  position: relative;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 85%,
+    0 100%
+  ); /*we need to give the polygon points in order lt-rt-rb-lb*/
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3rem;
+  }
+
+  &__textbox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+  }
+}
